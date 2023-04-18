@@ -52,7 +52,8 @@ header nav a {
 
 /*  main content styling */
 main {
-	grid-column: 2 / span 1;
+	max-width: 1200px;
+    margin: 0 auto;
 }
 
 section {
