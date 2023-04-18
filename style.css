@@ -5,12 +5,26 @@
 	--accent-color: #c49041;
 }
 
+/* Apply global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Define styles for the logo */
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
 body {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-	grid-template-rows: auto;
-	grid-gap: 20px;
-	padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: white;
 }
 
 /* styling to apply to both header/footer */
@@ -20,34 +34,23 @@ header, footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+/* Define styles for the navigation menu */
+nav {
+    display: flex;
 }
   
+nav ul {
+    display: flex;
+    list-style: none;
+}
+  
+nav li {
+    margin-left: 20px;
+}
 /* header styling */
-header {
-	background-color: var(--primary-color);
-	color: white;
-}
-
-header h1 {
-	font-size: 32px;
-	margin: 0;
-}
-
-header nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-}
-
-header nav li {
-	margin: 0 10px;
-}
-
-header nav a {
-	color: white;
-	text-decoration: none;
-}
 /* end header styling */
 
 /*  main content styling */
@@ -57,7 +60,11 @@ main {
 }
 
 section {
-	margin-bottom: 40px;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
 }
 
 section h2 {
@@ -83,6 +90,7 @@ section ul {
 section li {
 	background-color: white;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 	padding: 20px;
 	border-radius: 5px;
 }
@@ -120,7 +128,8 @@ section li a:hover {
 
 section li img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
   }
 /* end main content styling */
 
