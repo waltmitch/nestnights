@@ -1,0 +1,157 @@
+/*Brand colors*/
+:root {
+	--primary-color: #092e40;
+	--secondary-color: #e5cf92;
+	--accent-color: #c49041;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto;
+	grid-gap: 20px;
+	padding: 20px;
+}
+
+/* header styling */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--primary-color);
+	padding: 20px;
+	color: white;
+}
+
+header h1 {
+	font-size: 32px;
+	margin: 0;
+}
+
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+header nav li {
+	margin: 0 10px;
+}
+
+header nav a {
+	color: white;
+	text-decoration: none;
+}
+/* end header styling */
+
+/*  main content styling */
+main {
+	grid-column: 2 / span 1;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+section h2 {
+	margin-top: 0;
+	color: var(--primary-color);
+	font-size: 24px;
+}
+
+section p {
+	margin-top: 10px;
+	line-height: 1.5;
+}
+
+section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
+}
+
+section li {
+	background-color: white;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border-radius: 5px;
+}
+
+section li h3 {
+	margin-top: 0;
+	color: var(--primary-color);
+	font-size: 20px;
+}
+
+section li p {
+	margin-top: 10px;
+	line-height: 1.5;
+}
+
+section li a {
+	display: block;
+	margin-top: 20px;
+	background-color: var(--secondary-color);
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+section li a:hover {
+	background-color: var(--accent-color);
+}
+/* end main content styling */
+
+/* footer styling */
+footer {
+	background-color: var(--primary-color);
+	padding: 20px;
+	color: white;
+	text-align: center;
+	margin-top: auto;
+}
+
+footer p {
+	margin: 0;
+}
+
+footer a {
+	color: var(--secondary-color);
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: var(--accent-color);
+}
+
+/* end footer styling */
+
+/*
+This code defines a media query for screen sizes smaller than 768px
+Changes the layout of your website to a single column layout.
+*/
+@media (max-width: 768px) {
+	body {
+		grid-template-columns: 1fr;
+	}
+	
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	header nav {
+		margin-top: 20px;
+	}
+	
+	section ul {
+		grid-template-columns: 1fr;
+	}
+}
+
