@@ -2,36 +2,60 @@
 <html>
 <head>
 	<title>Nest Nights - Properties for Rent</title>
-	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="style4.css">
 </head>
 <body>
 	<header>
-		<h1>Nest Nights</h1>
+		<a href="/">
+			<img class="logo" src="images/logo.png" alt="Nest Nights Logo">
+			<h1>Nest Nights</h1>
+		</a>
 		<nav>
-			<ul>
+			<div class="nav-items">
+			  <ul>
 				<li><a href="#properties">Properties</a></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+			  </ul>
+			</div>
+		  </nav>
+		</header>
 	
 	<main>
 		<section id="properties">
 			<h2>Properties for Rent</h2>
 			<p>Here are some of our properties that are available for rent:</p>
-			<li>
-				<img src="images/Harmony woods_-20.jpg" alt="Property Image">
-				<h3>The Nest at Harmony Woods</h3>
-				<p>Description of the property</p>
-				<a href="#">Book Now</a>
-			</li>
-			<li>
-				<img src="images/MP-23020601-55.jpg" alt="Property Image">
-				<h3>The Nest at Woodside</h3>
-				<p>Description of the property</p>
-				<a href="#">Book Now</a>
-			</li>
+			<div class="properties-container">
+				<ul>
+					<li class="property">
+						<div class="gallery">
+							<ul>
+								<li><img class="thumbnail active" src="images/Harmony woods_-20.jpg" alt="Property Image"></li>
+								<!-- add more thumbnails as needed -->
+							</ul>
+						</div>
+						<img class="preview" src="images/Harmony woods_-20.jpg" alt="Property Preview">
+						<div class="video" id="Q9fa3i0iEmY"></div>
+						<h3>The Nest at Harmony Woods</h3>
+						<p>Description of the property</p>
+						<a id="book_harmony" href="#">Book Now</a>
+					</li>
+					<li class="property">
+						<div class="gallery">
+							<ul>
+								<li><img class="thumbnail active" src="images/MP-23020601-55.jpg" alt="Property Image"></li>
+								<!-- add more thumbnails as needed -->
+							</ul>
+						</div>
+						<img class="preview" src="images/MP-23020601-55.jpg" alt="Property Preview">
+						<div class="video" id="REPLACE_WITH_VIDEO_ID"></div>
+						<h3>The Nest at Woodside</h3>
+						<p>Description of the property</p>
+						<a id="book_harmony" href="#">Book Now</a>
+					</li>
+					<!-- add more properties as needed -->
+				</ul>
+			</div>
 		</section>
 		
 		<section id="about">
@@ -50,5 +74,9 @@
 	<footer>
 		<p>&copy; Nest Nights 2023</p>
 	</footer>
+
+	<!-- Scripts -->
+	<script src="scripts/animations.js"></script>
+	<script src="https://unpkg.com/lite-youtube@3.0.0/lite-youtube.js"></script>
 </body>
 </html>
